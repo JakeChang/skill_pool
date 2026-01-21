@@ -2,6 +2,20 @@
 
 在 Claude Code 中快速建立 Nuxt 4 專案並整合 TailwindCSS 與 DaisyUI。
 
+## 安裝
+
+**安裝到當前專案：**
+
+```bash
+git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool && mkdir -p .claude/skills && cp -r /tmp/skill_pool/.claude/skills/nuxt4-tailwind-daisyui .claude/skills/ && rm -rf /tmp/skill_pool
+```
+
+**安裝到全域：**
+
+```bash
+git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool && mkdir -p ~/.claude/skills && cp -r /tmp/skill_pool/.claude/skills/nuxt4-tailwind-daisyui ~/.claude/skills/ && rm -rf /tmp/skill_pool
+```
+
 ## 如何觸發此技能
 
 在 Claude Code 對話中，說明你想要建立 Nuxt 專案：

@@ -4,7 +4,17 @@ Claude Code 技能與命令集合。
 
 ## 安裝
 
-將 `.claude` 目錄複製到你的專案根目錄，或複製到 `~/.claude` 作為全域設定。
+**安裝到當前專案：**
+
+```bash
+git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool && cp -r /tmp/skill_pool/.claude ./ && rm -rf /tmp/skill_pool
+```
+
+**安裝到全域（所有專案皆可使用）：**
+
+```bash
+git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool && cp -r /tmp/skill_pool/.claude ~/ && rm -rf /tmp/skill_pool
+```
 
 ## 命令
 

@@ -2,6 +2,20 @@
 
 在 Claude Code 中建立技能的輔助工具。
 
+## 安裝
+
+**安裝到當前專案：**
+
+```bash
+git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool && mkdir -p .claude/skills && cp -r /tmp/skill_pool/.claude/skills/skill-creator .claude/skills/ && rm -rf /tmp/skill_pool
+```
+
+**安裝到全域：**
+
+```bash
+git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool && mkdir -p ~/.claude/skills && cp -r /tmp/skill_pool/.claude/skills/skill-creator ~/.claude/skills/ && rm -rf /tmp/skill_pool
+```
+
 ## 如何觸發此技能
 
 在 Claude Code 對話中，直接說明你想要建立技能：
