@@ -24,6 +24,7 @@ git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool 
 |------|------|------|
 | commit | 建立標準化的 git commit | [README](.claude/skills/commit/README.md) |
 | skill-creator | 建立 Claude Code 技能的輔助工具 | [README](.claude/skills/skill-creator/README.md) |
+| swagger-tracker | Swagger/OpenAPI 文件追蹤與版本比較 | [README](.claude/skills/swagger-tracker/README.md) |
 
 ### 專案模板
 
@@ -44,6 +45,7 @@ git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool 
 └── skills/
     ├── commit/                  # Git commit 工具
     ├── skill-creator/           # 技能建立工具
+    ├── swagger-tracker/         # Swagger API 文件追蹤
     ├── nuxt4-tailwind-daisyui/  # Nuxt 專案初始化
     └── diet-tracker/            # 營養追蹤顧問
 ```
