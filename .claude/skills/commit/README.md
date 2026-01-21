@@ -64,3 +64,11 @@ git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool 
  create mode 100644 src/components/LoginForm.vue
  create mode 100644 src/api/auth.ts
 ```
+
+## 更新技能
+
+```
+/commit update
+```
+
+將本機的 commit skill 更新到最新版本。

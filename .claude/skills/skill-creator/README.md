@@ -89,6 +89,14 @@ description: 技能說明，描述功能與使用時機
 技能內容...
 ```
 
+## 更新技能
+
+```
+/skill-creator update
+```
+
+將本機的 skill-creator skill 更新到最新版本。
+
 ## 相關檔案
 
 | 檔案 | 說明 |

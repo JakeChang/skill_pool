@@ -95,6 +95,14 @@ npm run build
 npm run preview
 ```
 
+## 更新技能
+
+```
+/nuxt4-tailwind-daisyui update
+```
+
+將本機的 nuxt4-tailwind-daisyui skill 更新到最新版本。
+
 ## 相關檔案
 
 | 檔案 | 說明 |

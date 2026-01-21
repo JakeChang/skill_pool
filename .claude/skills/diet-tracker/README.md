@@ -29,6 +29,7 @@ git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool 
 | `/diet-tracker learn [主題]` | 學習營養知識 |
 | `/diet-tracker goal [設定]` | 設定每日目標 |
 | `/diet-tracker calendar` | 產生行事曆首頁 |
+| `/diet-tracker update` | 更新到最新版本 |
 
 ## 使用範例
 
