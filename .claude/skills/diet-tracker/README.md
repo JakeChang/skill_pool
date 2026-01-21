@@ -20,21 +20,22 @@ git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool 
 
 | 指令 | 說明 |
 |------|------|
-| `/diet add [食物]` | 記錄飲食 |
-| `/diet today` | 今日統計 |
-| `/diet week` | 週報分析 |
-| `/diet suggest` | 智慧建議下一餐 |
-| `/diet analyze` | 深度營養分析 |
-| `/diet score` | 健康評分 (0-100) |
-| `/diet learn [主題]` | 學習營養知識 |
-| `/diet goal [設定]` | 設定每日目標 |
+| `/diet-tracker add [食物]` | 記錄飲食 |
+| `/diet-tracker today` | 今日統計 |
+| `/diet-tracker week` | 週報分析 |
+| `/diet-tracker suggest` | 智慧建議下一餐 |
+| `/diet-tracker analyze` | 深度營養分析 |
+| `/diet-tracker score` | 健康評分 (0-100) |
+| `/diet-tracker learn [主題]` | 學習營養知識 |
+| `/diet-tracker goal [設定]` | 設定每日目標 |
+| `/diet-tracker calendar` | 產生行事曆首頁 |
 
 ## 使用範例
 
 ### 記錄飲食
 
 ```
-/diet add 午餐吃了鮭魚定食
+/diet-tracker add 午餐吃了鮭魚定食
 ```
 
 輸出：
@@ -53,21 +54,21 @@ git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool 
 ### 查看今日統計
 
 ```
-/diet today
+/diet-tracker today
 ```
 
 ### 取得下一餐建議
 
 ```
-/diet suggest
+/diet-tracker suggest
 ```
 
 ### 設定目標
 
 ```
-/diet goal calories 1800
-/diet goal protein 100
-/diet goal type longevity
+/diet-tracker goal calories 1800
+/diet-tracker goal protein 100
+/diet-tracker goal type longevity
 ```
 
 **目標類型：**
@@ -79,7 +80,7 @@ git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool 
 ### 學習營養知識
 
 ```
-/diet learn protein
+/diet-tracker learn protein
 ```
 
 **支援主題：** protein、fat、carb、gut、inflammation、fasting、longevity、supplements
@@ -91,6 +92,7 @@ git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool 
 ```
 diet-records/
 ├── config.json          # 使用者目標設定
+├── index.html           # 行事曆首頁
 ├── 2026-01-21.json      # 每日飲食紀錄
 └── 2026-01-21.html      # 每日 HTML 報告
 ```
@@ -110,4 +112,5 @@ diet-records/
 | `references/nutrition-table.md` | 食物營養成分參考表 |
 | `references/science.md` | 營養科學知識庫 |
 | `references/scoring.md` | 健康評分計算邏輯 |
-| `assets/html-template.md` | HTML 報告模板 |
+| `assets/html-template.md` | 每日 HTML 報告模板 |
+| `assets/calendar-template.md` | 行事曆首頁模板 |
