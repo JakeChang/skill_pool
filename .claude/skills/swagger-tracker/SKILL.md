@@ -24,21 +24,22 @@ description: |
 
 ## 資料儲存位置
 
-所有 API 文件儲存在專案根目錄：
+所有 API 文件儲存在專案根目錄的 `swagger-docs/` 資料夾：
 
-- `{專案名稱}-{日期}.json` - 結構化 JSON（供比較用）
-- `{專案名稱}-{日期}.md` - 易讀的 Markdown 文件
-- `diff-{舊版本}-vs-{新版本}.md` - 版本差異報告（有變更時產生）
+- `swagger-docs/{專案名稱}-{日期}.json` - 結構化 JSON（供比較用）
+- `swagger-docs/{專案名稱}-{日期}.md` - 易讀的 Markdown 文件
+- `swagger-docs/diff-{舊版本}-vs-{新版本}.md` - 版本差異報告（有變更時產生）
 
 ## 用法
 
 ```bash
-python scripts/fetch_swagger.py <swagger_json_url> .
+mkdir -p swagger-docs
+python scripts/fetch_swagger.py <swagger_json_url> swagger-docs
 ```
 
 **參數：**
 - `swagger_json_url` - Swagger JSON 的 URL（通常是 `/api-json` 或 `/swagger.json`）
-- `.` - 輸出至專案根目錄
+- `swagger-docs` - 輸出至 swagger-docs 資料夾
 
 **Markdown 包含四大區塊：**
 1. **API** - 路徑、方法、摘要、描述
@@ -100,21 +101,22 @@ python scripts/fetch_swagger.py <swagger_json_url> .
 
 ```bash
 # 首次抓取（或追蹤變更，同一個指令）
-# 檔案會儲存在專案根目錄
-python scripts/fetch_swagger.py https://bistro-backend-dev.gomore.net/api-json .
+# 檔案會儲存在 swagger-docs 資料夾
+mkdir -p swagger-docs
+python scripts/fetch_swagger.py https://bistro-backend-dev.gomore.net/api-json swagger-docs
 ```
 
 **首次執行輸出：**
 ```
-bistro-backend-service-20260121.json
-bistro-backend-service-20260121.md
+swagger-docs/bistro-backend-service-20260121.json
+swagger-docs/bistro-backend-service-20260121.md
 ```
 
 **再次執行（有變更時）輸出：**
 ```
-bistro-backend-service-20260122.json
-bistro-backend-service-20260122.md
-diff-bistro-backend-service-20260121-vs-bistro-backend-service-20260122.md
+swagger-docs/bistro-backend-service-20260122.json
+swagger-docs/bistro-backend-service-20260122.md
+swagger-docs/diff-bistro-backend-service-20260121-vs-bistro-backend-service-20260122.md
 ```
 
 ## 常見 Swagger JSON URL
