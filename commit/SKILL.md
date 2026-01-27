@@ -44,35 +44,6 @@ description: 請建立 git commit，不要在 commit 訊息中加入 "Generated 
 ### `/commit update`
 更新本機的 commit skill 到最新版本。
 
-**步驟：**
-1. 使用 AskUserQuestion 詢問使用者要更新哪個位置：
-   - 全域（~/.claude/）：更新所有專案共用的 skills
-   - 當前專案（./.claude/）：只更新當前專案的 skills
-
-2. 根據選擇設定目標路徑
-
-3. 執行更新流程：
-   ```bash
-   rm -rf /tmp/skill_pool
-   git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool
-   ```
-
-4. 複製 commit skill 到目標位置：
-   ```bash
-   mkdir -p <目標路徑>/skills
-   cp -r /tmp/skill_pool/.claude/skills/commit <目標路徑>/skills/
-   ```
-
-5. 清理臨時檔案：
-   ```bash
-   rm -rf /tmp/skill_pool
-   ```
-
-6. 顯示更新結果
-
-**輸出範例：**
-```
-[更新完成] commit 已更新至最新版本
-
-更新位置：~/.claude/skills/commit
+```bash
+npx openskills update
 ```

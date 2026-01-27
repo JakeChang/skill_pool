@@ -4,16 +4,9 @@
 
 ## 安裝
 
-**安裝到當前專案：**
-
 ```bash
-git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool && mkdir -p .claude/skills && cp -r /tmp/skill_pool/.claude/skills/work-tracker .claude/skills/ && rm -rf /tmp/skill_pool
-```
-
-**安裝到全域：**
-
-```bash
-git clone --depth 1 https://github.com/JakeChang/skill_pool.git /tmp/skill_pool && mkdir -p ~/.claude/skills && cp -r /tmp/skill_pool/.claude/skills/work-tracker ~/.claude/skills/ && rm -rf /tmp/skill_pool
+npx openskills install JakeChang/skill_pool/work-tracker
+npx openskills sync
 ```
 
 ## 指令一覽
