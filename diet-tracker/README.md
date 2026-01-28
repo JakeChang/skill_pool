@@ -81,14 +81,15 @@ npx openskills sync
 
 ## 資料儲存
 
-所有紀錄儲存在專案根目錄的 `./diet-records/`：
+所有紀錄儲存在專案根目錄的 `./diet-tracker/`：
 
 ```
-diet-records/
+diet-tracker/
 ├── config.json          # 使用者目標設定
-├── index.html           # 行事曆首頁
 ├── 2026-01-21.json      # 每日飲食紀錄
-└── 2026-01-21.html      # 每日 HTML 報告
+└── reports/
+    ├── index.html       # 行事曆首頁
+    └── 2026-01-21.html  # 每日 HTML 報告
 ```
 
 ## 核心功能

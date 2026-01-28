@@ -1,6 +1,6 @@
 # JSON 資料結構
 
-每部動畫儲存為獨立 JSON 檔案，位於 `data/{anime-slug}.json`。
+每部動畫儲存為獨立 JSON 檔案，位於 `cartoon-notes/{anime-slug}.json`。
 
 ## 完整結構
 

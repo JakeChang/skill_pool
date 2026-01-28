@@ -16,13 +16,19 @@ description: 專業營養追蹤與健康顧問。追蹤每日飲食、深度分�
 
 ## 資料儲存位置
 
-所有飲食紀錄儲存在專案根目錄：`diet-records/`
+**重要：所有飲食紀錄必須儲存在專案根目錄的 `diet-tracker/` 資料夾內。**
 
-- `diet-records/config.json` - 使用者設定（目標、個人資料）
-- `diet-records/YYYY-MM-DD.json` - 每日飲食紀錄
-- `diet-records/YYYY-MM-DD.html` - 每日 HTML 報告
-- `diet-records/index.html` - 行事曆首頁（當月）
-- `diet-records/index-YYYY-MM.html` - 歷史月份行事曆
+**禁止事項：**
+- **絕對禁止** 將任何紀錄或設定檔案寫入 `.claude/` 目錄
+- **絕對禁止** 使用 `.claude/memories/`、`.claude/settings/` 或任何 `.claude/` 子目錄
+- 如果 `diet-tracker/` 目錄不存在，請先建立它
+
+**正確的檔案位置：**
+- `diet-tracker/config.json` - 使用者設定（目標、個人資料）
+- `diet-tracker/YYYY-MM-DD.json` - 每日飲食紀錄
+- `diet-tracker/reports/YYYY-MM-DD.html` - 每日 HTML 報告
+- `diet-tracker/reports/index.html` - 行事曆首頁（當月）
+- `diet-tracker/reports/index-YYYY-MM.html` - 歷史月份行事曆
 
 ## 參考資料
 
@@ -41,7 +47,9 @@ description: 專業營養追蹤與健康顧問。追蹤每日飲食、深度分�
 
 ## 首次使用設定
 
-**重要：每次執行任何指令前，必須先檢查 `diet-records/config.json` 是否存在。**
+**重要：每次執行任何指令前，必須先檢查 `diet-tracker/config.json` 是否存在。**
+
+**注意：config.json 必須建立在 `diet-tracker/config.json`，不是 `.claude/` 目錄下。**
 
 如果 config.json 不存在，必須先完成初始設定：
 
@@ -171,11 +179,11 @@ description: 專業營養追蹤與健康顧問。追蹤每日飲食、深度分�
 產生或更新行事曆首頁（index.html）。
 
 **步驟：**
-1. 掃描 `diet-records/` 目錄下所有 JSON 紀錄檔案
+1. 掃描 `diet-tracker/` 目錄下所有 JSON 紀錄檔案
 2. 讀取每個檔案的健康分數和熱量資訊
 3. 計算當月統計（記錄天數、平均分數、平均熱量、平均蛋白質）
 4. 產生當月行事曆 HTML（參考 calendar-template.md）
-5. 儲存為 `diet-records/index.html`
+5. 儲存為 `diet-tracker/reports/index.html`
 
 **功能特點：**
 - 以月曆格式顯示，每日格子顯示健康分數
@@ -194,7 +202,7 @@ description: 專業營養追蹤與健康顧問。追蹤每日飲食、深度分�
 - 平均熱量：1650 kcal
 - 平均蛋白質：95g
 
-檔案位置：diet-records/index.html
+檔案位置：diet-tracker/reports/index.html
 ```
 
 ### `/diet-tracker update`

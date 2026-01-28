@@ -33,7 +33,7 @@ npx openskills sync
 |----------------|-----------|------|----------|
 | 葬送的芙莉蓮   | MADHOUSE  | 2023 | watching |
 
-檔案：data/frieren.json
+檔案：cartoon-notes/frieren.json
 ```
 
 ### 記錄集數心得
@@ -95,23 +95,21 @@ npx openskills sync
 ```
 
 輸出：
-- `output/index.html` - 動畫列表頁面
-- `output/{anime-id}.html` - 各動畫詳情頁面
+- `cartoon-notes/reports/index.html` - 動畫列表頁面
+- `cartoon-notes/reports/{anime-id}.html` - 各動畫詳情頁面
 
 ## 資料儲存
 
-所有紀錄儲存在專案根目錄：
+所有紀錄儲存在專案根目錄的 `./cartoon-notes/`：
 
 ```
-data/
+cartoon-notes/
 ├── frieren.json            # 葬送的芙莉蓮
 ├── demon-slayer.json       # 鬼滅之刃
-└── ...
-
-output/
-├── index.html              # 動畫列表
-├── frieren.html            # 動畫詳情
-└── ...
+├── ...
+└── reports/
+    ├── index.html          # 動畫列表
+    └── frieren.html        # 動畫詳情
 ```
 
 ## 核心功能

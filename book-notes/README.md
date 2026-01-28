@@ -32,7 +32,7 @@ npx openskills sync
 |----------|-------------|---------|------------|
 | 原子習慣 | James Clear | reading | 2026-01-27 |
 
-檔案：data/atomic-habits.json
+檔案：book-notes/atomic-habits.json
 ```
 
 ### 記錄章節
@@ -92,23 +92,21 @@ npx openskills sync
 ```
 
 輸出：
-- `output/index.html` - 書籍列表頁面
-- `output/{book-id}.html` - 各書籍詳情頁面
+- `book-notes/reports/index.html` - 書籍列表頁面
+- `book-notes/reports/{book-id}.html` - 各書籍詳情頁面
 
 ## 資料儲存
 
-所有紀錄儲存在專案根目錄的 `./data/`：
+所有紀錄儲存在專案根目錄的 `./book-notes/`：
 
 ```
-data/
+book-notes/
 ├── atomic-habits.json      # 原子習慣
 ├── deep-work.json          # 深度工作
-└── ...
-
-output/
-├── index.html              # 書籍列表
-├── atomic-habits.html      # 書籍詳情
-└── ...
+├── ...
+└── reports/
+    ├── index.html          # 書籍列表
+    └── atomic-habits.html  # 書籍詳情
 ```
 
 ## 核心功能

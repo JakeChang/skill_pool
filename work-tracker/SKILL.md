@@ -37,7 +37,17 @@ description: |
 
 ## 資料儲存
 
-所有資料儲存在專案根目錄的 `work-tracker/` 資料夾。
+**重要：所有資料必須儲存在專案根目錄的 `work-tracker/` 資料夾內。**
+
+**禁止事項：**
+- **絕對禁止** 將任何紀錄或設定檔案寫入 `.claude/` 目錄
+- **絕對禁止** 使用 `.claude/memories/`、`.claude/settings/` 或任何 `.claude/` 子目錄
+- 如果 `work-tracker/` 或其子資料夾不存在，請先建立它
+
+**正確的檔案位置：**
+- 每日記錄：`work-tracker/daily/{YYYY-MM-DD}.json`
+- 目標檔案：`work-tracker/goals/`
+- 行事曆輸出：`work-tracker/calendar/`
 
 詳細 JSON 結構請見 [references/schema.md](references/schema.md)。
 

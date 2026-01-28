@@ -1,6 +1,6 @@
 # HTML 行事曆首頁範本
 
-產生 `diet-records/index.html` 作為所有報告的入口頁面。
+產生 `diet-tracker/reports/index.html` 作為所有報告的入口頁面。
 
 ## 報告內容
 1. 標題與當月摘要

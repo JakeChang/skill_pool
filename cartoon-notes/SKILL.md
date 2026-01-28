@@ -9,8 +9,16 @@ description: 個人動畫卡通觀看紀錄管理系統。用於記錄動畫每�
 
 ## 資料位置
 
-- 紀錄檔：`data/{anime-slug}.json`
-- HTML 輸出：`output/`
+**重要：所有資料必須儲存在本 skill 目錄內的指定資料夾。**
+
+**禁止事項：**
+- **絕對禁止** 將任何紀錄或設定檔案寫入 `.claude/` 目錄
+- **絕對禁止** 使用 `.claude/memories/`、`.claude/settings/` 或任何 `.claude/` 子目錄
+- 如果資料夾不存在，請先建立它
+
+**正確的檔案位置：**
+- 紀錄檔：`cartoon-notes/{anime-slug}.json`
+- HTML 輸出：`cartoon-notes/reports/`
 
 ## 資源文件
 
@@ -30,7 +38,7 @@ description: 個人動畫卡通觀看紀錄管理系統。用於記錄動畫每�
 用戶說「記錄《動畫名》」或「新增動畫 XXX」時：
 
 1. 詢問基本資訊（名稱、製作公司、年份）
-2. 建立 `data/{slug}.json`，status 設為 `watching`
+2. 建立 `cartoon-notes/{slug}.json`，status 設為 `watching`
 3. id 使用 slug 格式（小寫、連字號）
 
 ### 2. 記錄集數心得
@@ -55,7 +63,7 @@ description: 個人動畫卡通觀看紀錄管理系統。用於記錄動畫每�
 
 用戶說「我的動畫」或「追番列表」時：
 
-1. 用 Glob 讀取 `data/*.json`
+1. 用 Glob 讀取 `cartoon-notes/*.json`
 2. 列出清單，顯示狀態與進度
 
 ### 5. 生成 HTML
@@ -64,7 +72,7 @@ description: 個人動畫卡通觀看紀錄管理系統。用於記錄動畫每�
 
 1. 讀取 JSON 資料
 2. 依照 [html-templates.md](assets/html-templates.md) 生成 HTML
-3. 使用 Write 工具輸出到 `output/`
+3. 使用 Write 工具輸出到 `cartoon-notes/reports/`
 
 ---
 

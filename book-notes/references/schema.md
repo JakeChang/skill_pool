@@ -2,7 +2,7 @@
 
 ## 資料儲存
 
-- 位置：專案根目錄 `data/`
+- 位置：專案根目錄 `book-notes/`
 - 命名：`{book-slug}.json`（小寫、連字號）
 - 日期格式：ISO 8601（YYYY-MM-DD）
 
