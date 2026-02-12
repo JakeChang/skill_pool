@@ -9,13 +9,13 @@ PROJECT_NAME=${1:-"nuxt4-daisyui-app"}
 echo "🚀 建立 Nuxt 4 專案: $PROJECT_NAME"
 
 # 建立 Nuxt 專案
-npm create nuxt "$PROJECT_NAME" -- --no-install
+npx nuxi@latest init "$PROJECT_NAME" --no-install
 cd "$PROJECT_NAME"
 
 # 安裝依賴
 echo "📦 安裝依賴套件..."
 npm install
-npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+npm install -D tailwindcss@4 @tailwindcss/vite daisyui@5
 
 # 建立 nuxt.config.ts
 echo "⚙️ 設定 nuxt.config.ts..."
@@ -24,12 +24,23 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+  future: {
+    compatibilityVersion: 4,
+  },
   devtools: { enabled: true },
   vite: {
     plugins: [tailwindcss()],
   },
-  css: ["./app/tailwind.css"],
+  css: ["~/tailwind.css"],
 })
+EOF
+
+# 建立 tsconfig.json
+echo "📝 建立 tsconfig.json..."
+cat > tsconfig.json << 'EOF'
+{
+  "extends": "./.nuxt/tsconfig.json"
+}
 EOF
 
 # 建立 tailwind.css
