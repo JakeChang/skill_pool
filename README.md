@@ -27,12 +27,14 @@ npx openskills sync
 | commit | 建立標準化的 git commit | [README](commit/README.md) |
 | skill-creator | 建立 Claude Code 技能的輔助工具 | [README](skill-creator/README.md) |
 | swagger-tracker | Swagger/OpenAPI 文件追蹤與版本比較 | [README](swagger-tracker/README.md) |
+| dev-cli | Node.js CLI/TUI 應用開發（TypeScript + meow） | [README](dev-cli/README.md) |
 
 ### 專案模板
 
 | 技能 | 說明 | 文件 |
 |------|------|------|
 | nuxt4-tailwind-daisyui | 快速建立 Nuxt 4 + TailwindCSS + DaisyUI 專案 | [README](nuxt4-tailwind-daisyui/README.md) |
+| dev-nuxt | Nuxt 模組化開發（需求規劃、計劃書、開發、測試） | [README](dev-nuxt/README.md) |
 
 ### 生活應用
 
@@ -50,6 +52,8 @@ skill_pool/
 ├── commit/                  # Git commit 工具
 ├── skill-creator/           # 技能建立工具
 ├── swagger-tracker/         # Swagger API 文件追蹤
+├── dev-cli/                 # CLI/TUI 應用開發
+├── dev-nuxt/                # Nuxt 模組化開發
 ├── nuxt4-tailwind-daisyui/  # Nuxt 專案初始化
 ├── diet-tracker/            # 營養追蹤顧問
 ├── work-tracker/            # 工作記錄追蹤
