@@ -8,13 +8,12 @@ PROJECT_NAME=${1:-"nuxt4-daisyui-app"}
 
 echo "🚀 建立 Nuxt 4 專案: $PROJECT_NAME"
 
-# 建立 Nuxt 專案
-npx nuxi@latest init "$PROJECT_NAME" --no-install
+# 建立 Nuxt 專案（非互動模式，自動安裝依賴）
+npx nuxi@latest init "$PROJECT_NAME" --packageManager npm --no-gitInit 2>&1
 cd "$PROJECT_NAME"
 
-# 安裝依賴
-echo "📦 安裝依賴套件..."
-npm install
+# 安裝額外依賴
+echo "📦 安裝 TailwindCSS + DaisyUI..."
 npm install -D tailwindcss@4 @tailwindcss/vite daisyui@5
 
 # 建立 nuxt.config.ts
